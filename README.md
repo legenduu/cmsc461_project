@@ -13,4 +13,5 @@ python -m flask run
 TO START THE APPLICATION (using Mac): 
 
 export FLASK_APP=backend.py
+
 flask run
