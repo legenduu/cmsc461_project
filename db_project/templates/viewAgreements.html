@@ -1,0 +1,42 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type = "text/css" href="{{url_for('static', filename='mystyle.css')}}"/>
+    <title>List</title>  
+</head>  
+<body>  
+   
+<div class = "container">
+<h3>List of Agreements</h3>  
+<table class = "content-table">  
+    <thead>  
+        <td>Agreement ID</td>  
+        <td>Agency ID</td>
+        <td>Rental ID</td>
+        <td>Office</td>    
+    </thead>  
+       
+    {% for row in rows %}  
+       
+        <tr>  
+            <td>{{row["Agreement_id"]}}</td>  
+            <td>{{row["agency_id"]}}</td>  
+            <td>{{row["rental_id"]}}</td> 
+            <td>{{row["Office_name"]}}</td>  
+        </tr>  
+       
+    {% endfor %}  
+</table>
+<br><br> 
+<div style="text-align:center">
+    <a href="/addAgreement">Add Agreement</a> 
+    <br><br>
+    <a href="/deleteAgreement">Delete Agreement</a> 
+    <br><br>  
+    <a href="/">Go back to home page</a>  
+    </div>
+   
+</div>
+</body>  
+</html>  

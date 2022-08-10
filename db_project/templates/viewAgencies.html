@@ -1,0 +1,44 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type = "text/css" href="{{url_for('static', filename='mystyle.css')}}"/>
+    <title>List</title>  
+</head>  
+<body>  
+   
+<div class = "container">
+
+<h3>List of Agencies</h3>  
+<table class = "content-table">  
+    <thead>  
+        <td>Agency ID</td>  
+        <td>Name</td>
+        <td>Address</td>    
+        <td>Phone</td> 
+    </thead>  
+       
+    {% for row in rows %}  
+       
+        <tr>  
+            <td>{{row["Agency_id"]}}</td>  
+            <td>{{row["Agency_name"]}}</td>  
+            <td>{{row["Address"]}}</td>
+            <td>{{row["Phone"]}}</td>   
+        </tr>  
+       
+    {% endfor %}  
+</table>
+<br><br> 
+
+<div style="text-align:center">
+<a href="/addAgency">Add Agency</a> 
+<br><br>
+<a href="/deleteAgency">Delete Agency</a> 
+<br><br>  
+<a href="/">Go back to home page</a>  
+</div>
+
+</div>
+</body>  
+</html>  
