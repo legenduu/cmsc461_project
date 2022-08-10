@@ -6,12 +6,12 @@ Go to the directory of the App.
 
 TO START THE APPLICATION (using Windows Powershell PS):
 
-$env:FLASK_APP = "backend.py"
+  $env:FLASK_APP = "backend.py"
 
-python -m flask run
+  python -m flask run
 
 TO START THE APPLICATION (using Mac): 
 
-export FLASK_APP=backend.py
+  export FLASK_APP=backend.py
 
-flask run
+  flask run
